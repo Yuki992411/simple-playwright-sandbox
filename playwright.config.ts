@@ -39,7 +39,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         launchOptions: {
-          // headless: true,
+          headless: true,
           executablePath: "/usr/bin/google-chrome",
         },
       },
