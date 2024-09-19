@@ -17,6 +17,6 @@ WARNING: The requested image's platform (linux/amd64) does not match the detecte
 ## Run Playwright test
 
 ```bash
-npm ci
-npx playwright test
+yarn install
+yarn run test
 ```

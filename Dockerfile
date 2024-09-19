@@ -15,6 +15,9 @@ RUN curl -O https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-x64.tar.xz \
     && mv node-v20.17.0-linux-x64 /usr/local/node \
     && ln -s /usr/local/node/bin/node /usr/bin/node \
     && ln -s /usr/local/node/bin/npm /usr/bin/npm \
-    && ln -s /usr/local/node/bin/npx /usr/bin/npx
+    && ln -s /usr/local/node/bin/corepack /usr/bin/corepack
+
+RUN npm install -g yarn@1 \
+    && ln -s /usr/local/node/bin/yarn /usr/bin/yarn
 
 WORKDIR /app
