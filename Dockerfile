@@ -1,11 +1,16 @@
 FROM --platform=x86_64 rockylinux:9.3
 
+ENV LANG=ja_JP.utf8
+ENV TZ=Asia/Tokyo
+
 WORKDIR /opt
 
 RUN curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 RUN dnf update -y && dnf install -y \
     ./google-chrome-stable_current_x86_64.rpm \
+    glibc-langpack-ja \
+    langpacks-ja \
     vim \
     xz \
     && dnf clean all
